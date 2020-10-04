@@ -63,21 +63,26 @@ Push Docker image to docker hub with tag v2:
 upgrade nodejs application with tag v2:
     
     kubectl rollout history deployment nodejs-deployment
+    
 Check rollout history for revision "1"
     
     kubectl rollout history deployment nodejs-deployment --revision=1
+    
 Upgrade new image using below command
     
     kubectl set image deployment nodejs-deployment nodejs-deployment=naresh240/nodejs-k8s:v2
+    
 # Goto Web UI and check updated version output
 ![image](https://user-images.githubusercontent.com/58024415/95006858-854ef400-0626-11eb-8250-9a5d4a559e11.png)
+
 Check rollout history for revision "2"
 
     kubectl rollout history deployment nodejs-deployment --revision=2
   
  Rollout to previous version using below command 
     
-    kubectl rollout undo deployment nodejs-deployment --to-revision=1   
+    kubectl rollout undo deployment nodejs-deployment --to-revision=1
+    
 # Goto Web UI and check again:
   https://nodejs.cloudtechmasters.ml/
   
