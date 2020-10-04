@@ -1,15 +1,23 @@
 # Blue Green Deployment NodejsApp
 
 # Pre-requisites:
-    - Install Git
-    - Install npm
-    - Install Docker
-    - EKS-Cluster
+    - Install GIT
+    - EKS Cluster
     - Install ALB-Ingress-Controller
     - Request a Cerficate using Certificate Manager
     - Create Hosted Zone with our Domain Name
     - External DNS Setup
-# Install Git:
+# EKS Cluster Setup:
+  [EKS Cluster Setup](https://github.com/Naresh240/eks-cluster-setup/blob/main/README.md)
+# ALB Ingress Controller Setup:
+  [ALB Ingress Controller](https://github.com/Naresh240/ALB-Ingress-Controller-Setup/blob/main/README.md)
+# Create Hosted Zone with our Domain Name
+![image](https://user-images.githubusercontent.com/58024415/94990966-7e2fd380-059d-11eb-8285-a82353f38c1a.png)
+# Request a Cerficate using Certificate Manager
+![image](https://user-images.githubusercontent.com/58024415/94990930-301ad000-059d-11eb-9c5d-8ee47d494f82.png)
+# External DNS Setup:
+  [External DNS](https://github.com/Naresh240/External-DNS-Setup-Kubernetes/tree/main)
+# Install GIT:
     yum install git -y
 # Install npm:
     sudo yum install -y gcc-c++ make
@@ -19,8 +27,8 @@
     yum install docker -y
     service docker start
 # Clone code from github:
-    git clone https://github.com/VamsiTechTuts/kubernetes.git
-    cd kubernetes/nodejs-k8s
+    git clone https://github.com/Naresh240/RollingUpdate-Rollback-NodejsApp
+    cd RollingUpdate-Rollback-NodejsApp
 # Build Maven Artifact:
     npm install
 # Build Docker image for Springboot Application
@@ -30,8 +38,8 @@
 # Push docker image to dockerhub
     docker push naresh240/nodejs-k8s:v1
 # Deploy nodejs Application using below commands:
-    kubectl apply -f deployment-blue.yml
-    kubectl apply -f service-blue.yml
+    kubectl apply -f deployment.yml
+    kubectl apply -f service.yml
 # Check pods and services:
     kubectl get pods
     kubectl get svc
@@ -52,21 +60,21 @@ Push Docker image to docker hub with tag v2:
     docker push naresh240/nodejs-k8s:v2
 
 upgrade nodejs application with tag v2:
-
-    kubectl apply -f deployment-green.yml
-    kubectl apply -f service-green.yml
     
- Update ingress file by editing service name
- 
-  ![image](https://user-images.githubusercontent.com/58024415/95006146-b9beb200-061e-11eb-9fbe-cfdeca61e59c.png)
-
-Run ingress again
-
-    kubectl apply -f ingress.yml
+    kubectl rollout history deployment nodejs-deployment
+Check rollout history for revision "1"
     
+    kubectl rollout history deployment nodejs-deployment --revision=1
+Upgrade new image using below command
+    
+    kubectl set image deployment nodejs-deployment nodejs-deployment=naresh240/nodejs-k8s:v2
+Check rollout history for revision "2"
+
+    kubectl rollout history deployment nodejs-deployment --revision=2
+  
+ Rollout to previous version using below command 
+    
+    kubectl rollout undo deployment nodejs-deployment --to-revision=1   
 # Goto Web UI and check whether we are getting upgraded output or not:
   https://nodejs.cloudtechmasters.ml/
-![image](https://user-images.githubusercontent.com/58024415/95006177-0a360f80-061f-11eb-9b58-02376f1cd9e4.png)
-# Remove older version of deployment and service:
-    kubectl delete deploy nodejs-deployment-blue
-    kubectl delete svc nodejs-service-blue
+![image](https://user-images.githubusercontent.com/58024415/95006858-854ef400-0626-11eb-8250-9a5d4a559e11.png)
