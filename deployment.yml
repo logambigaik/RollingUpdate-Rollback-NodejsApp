@@ -6,6 +6,11 @@ metadata:
     app: nodejs
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 1
   selector:
     matchLabels:
       app: nodejs
@@ -15,7 +20,8 @@ spec:
         app: nodejs
     spec:
       containers:
-      - name: nodejs-blue
-        image: naresh240/node-web-app:v1
+      - name: nodejs-deployment
+        image: naresh240/nodejs-k8s:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
