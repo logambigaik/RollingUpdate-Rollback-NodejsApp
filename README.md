@@ -49,6 +49,7 @@
     kubectl get ingress
 # Go to UI and check our external dns, which showing output application with HTTPS
   https://nodejs.cloudtechmasters.ml/
+  
 ![image](https://user-images.githubusercontent.com/58024415/95006082-dc040000-061d-11eb-8fd6-da6c80216c54.png)
 # Upgrading for nodejs Application:
 Edit our our application and Build docker image with new tag:
@@ -75,6 +76,7 @@ Check rollout history for revision "2"
  Rollout to previous version using below command 
     
     kubectl rollout undo deployment nodejs-deployment --to-revision=1   
-# Goto Web UI and check whether we are getting upgraded output or not:
+# Goto Web UI and check again:
   https://nodejs.cloudtechmasters.ml/
+  
 ![image](https://user-images.githubusercontent.com/58024415/95006858-854ef400-0626-11eb-8250-9a5d4a559e11.png)
