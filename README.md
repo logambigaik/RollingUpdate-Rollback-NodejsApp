@@ -69,6 +69,8 @@ Check rollout history for revision "1"
 Upgrade new image using below command
     
     kubectl set image deployment nodejs-deployment nodejs-deployment=naresh240/nodejs-k8s:v2
+# Goto Web UI and check updated version output
+![image](https://user-images.githubusercontent.com/58024415/95006858-854ef400-0626-11eb-8250-9a5d4a559e11.png)
 Check rollout history for revision "2"
 
     kubectl rollout history deployment nodejs-deployment --revision=2
@@ -79,4 +81,5 @@ Check rollout history for revision "2"
 # Goto Web UI and check again:
   https://nodejs.cloudtechmasters.ml/
   
-![image](https://user-images.githubusercontent.com/58024415/95006858-854ef400-0626-11eb-8250-9a5d4a559e11.png)
+![image](https://user-images.githubusercontent.com/58024415/95006993-fa6ef900-0627-11eb-8269-66299b56f504.png)
+
