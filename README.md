@@ -14,8 +14,10 @@
   [EKS Cluster Setup](https://github.com/Naresh240/eks-cluster-setup/blob/main/README.md)
 # ALB Ingress Controller Setup:
   [ALB Ingress Controller](https://github.com/Naresh240/ALB-Ingress-Controller-Setup/blob/main/README.md)
+  
 # Create Hosted Zone with our Domain Name
-![image](https://user-images.githubusercontent.com/58024415/94990966-7e2fd380-059d-11eb-8285-a82353f38c1a.png)
+
+![image](https://user-images.githubusercontent.com/54719289/113162461-3b427600-9237-11eb-9d44-1e5599393457.png)
 ![image](https://user-images.githubusercontent.com/54719289/113162140-edc60900-9236-11eb-82c5-9f101572d520.png)
 
 # Request a Cerficate using Certificate Manager
@@ -76,9 +78,10 @@ without externaldns and security:
 
 
 # Go to UI and check our external dns, which showing output application with HTTPS
-  https://nodejs.cloudtechmasters.ml/
+  http://nodejs.staticwebsitehosting.tk/
   
-![image](https://user-images.githubusercontent.com/58024415/95006082-dc040000-061d-11eb-8fd6-da6c80216c54.png)
+![image](https://user-images.githubusercontent.com/54719289/113163166-ce7bab80-9237-11eb-83f5-bed4fe7b3700.png)
+
 # Upgrading for nodejs Application:
 Edit our our application and Build docker image with new tag:
     
