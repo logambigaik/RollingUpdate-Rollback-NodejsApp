@@ -42,10 +42,18 @@
     docker push naresh240/nodejs-k8s:v1
 # Deploy nodejs Application using below commands:
     kubectl apply -f deployment.yml
+
+![image](https://user-images.githubusercontent.com/54719289/113134274-80a37b00-9218-11eb-9961-7f6a850a6331.png)
+
     kubectl apply -f service.yml
+
+![image](https://user-images.githubusercontent.com/54719289/113134368-9b75ef80-9218-11eb-968b-4621621d4e93.png)
+
 # Check pods and services:
     kubectl get pods
     kubectl get svc
+![image](https://user-images.githubusercontent.com/54719289/113134586-e4c63f00-9218-11eb-8981-41cb5dfca5b3.png)
+
 # Run ingress for checking output with DNS name
     kubectl apply -f ingress.yml
 # Check Load Balancer of ALB ingress controller attached to ingress or not
