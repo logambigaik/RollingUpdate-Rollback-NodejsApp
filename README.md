@@ -56,8 +56,23 @@
 
 # Run ingress for checking output with DNS name
     kubectl apply -f ingress.yml
+    
+without externaldns and security:
+
 # Check Load Balancer of ALB ingress controller attached to ingress or not
     kubectl get ingress
+    
+ ![image](https://user-images.githubusercontent.com/54719289/113135384-fb20ca80-9219-11eb-818d-f21b56a2b45b.png)
+ 
+    #remove paths for ssl and execute it again (kubectl apply -f ingress.yml and kubectl get ingress)
+ ![image](https://user-images.githubusercontent.com/54719289/113136995-e6453680-921b-11eb-846b-9b83e41efa23.png)
+
+  Now another load balance is created 
+![image](https://user-images.githubusercontent.com/54719289/113137135-096fe600-921c-11eb-9e5f-78519208c313.png)
+![image](https://user-images.githubusercontent.com/54719289/113137176-18ef2f00-921c-11eb-8c03-2573ada4122f.png)
+
+
+
 # Go to UI and check our external dns, which showing output application with HTTPS
   https://nodejs.cloudtechmasters.ml/
   
