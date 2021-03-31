@@ -36,8 +36,15 @@ REfresh and check hostedzone:
 ![image](https://user-images.githubusercontent.com/54719289/113164717-426a8380-9239-11eb-95d2-e7d5c1a93f29.png)
 
 ![image](https://user-images.githubusercontent.com/58024415/94990930-301ad000-059d-11eb-9c5d-8ee47d494f82.png)
+
+Note : ARN for certificate : 	arn:aws:acm:us-east-1:136962450893:certificate/c4e6bf26-02df-4e49-b88b-9412562c1966
+
 # External DNS Setup:
   [External DNS](https://github.com/Naresh240/External-DNS-Setup-Kubernetes/tree/main)
+  
+![image](https://user-images.githubusercontent.com/54719289/113166169-6aa6b200-923a-11eb-857b-d0064175b0f6.png)
+
+    
 # Install GIT:
     yum install git -y
 # Install npm:
@@ -132,4 +139,7 @@ Check rollout history for revision "2"
   https://nodejs.cloudtechmasters.ml/
   
 ![image](https://user-images.githubusercontent.com/58024415/95006993-fa6ef900-0627-11eb-8269-66299b56f504.png)
+
+# After updating the domain in ingress.yml, run the ingress.yml
+![image](https://user-images.githubusercontent.com/54719289/113166377-a04b9b00-923a-11eb-8107-b72d0216a2f4.png)
 
