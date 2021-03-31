@@ -19,8 +19,22 @@
 
 ![image](https://user-images.githubusercontent.com/54719289/113162461-3b427600-9237-11eb-9d44-1e5599393457.png)
 ![image](https://user-images.githubusercontent.com/54719289/113162140-edc60900-9236-11eb-82c5-9f101572d520.png)
+![image](https://user-images.githubusercontent.com/54719289/113163637-41852200-9238-11eb-9df2-1ac7029e3ef5.png)
+
 
 # Request a Cerficate using Certificate Manager
+    In AWS certificate Manager:
+![image](https://user-images.githubusercontent.com/54719289/113163816-6d080c80-9238-11eb-81b5-39d15bf89a63.png)
+![image](https://user-images.githubusercontent.com/54719289/113164046-ab9dc700-9238-11eb-8cbf-fe513be44e41.png)
+![image](https://user-images.githubusercontent.com/54719289/113164129-be180080-9238-11eb-9290-7169cfa5b60f.png)
+![image](https://user-images.githubusercontent.com/54719289/113164196-ccfeb300-9238-11eb-941e-d9836eee2478.png)
+Create Route53:
+![image](https://user-images.githubusercontent.com/54719289/113164397-f8819d80-9238-11eb-8bcb-b74653f6d0e0.png)
+![image](https://user-images.githubusercontent.com/54719289/113164472-09caaa00-9239-11eb-8537-8b21d0114ff4.png)
+
+REfresh and check hostedzone:
+![image](https://user-images.githubusercontent.com/54719289/113164717-426a8380-9239-11eb-95d2-e7d5c1a93f29.png)
+
 ![image](https://user-images.githubusercontent.com/58024415/94990930-301ad000-059d-11eb-9c5d-8ee47d494f82.png)
 # External DNS Setup:
   [External DNS](https://github.com/Naresh240/External-DNS-Setup-Kubernetes/tree/main)
