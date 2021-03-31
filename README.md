@@ -1,5 +1,8 @@
 # Blue Green Deployment NodejsApp
 
+![image](https://user-images.githubusercontent.com/54719289/113128063-51d5d680-9211-11eb-9b8f-17c2b8a041d7.png)
+
+
 # Pre-requisites:
     - Install GIT
     - EKS Cluster
